@@ -7,8 +7,8 @@
     <ProjectGuid>{D929B8F2-2BC9-46D9-9F16-3FFE42264B38}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BricksFx.Demo.Module</RootNamespace>
-    <AssemblyName>BricksFx.Demo.Module</AssemblyName>
+    <RootNamespace>BricksFx.Demo.CommunicationModule</RootNamespace>
+    <AssemblyName>BricksFx.Demo.CommunicationModule</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -38,10 +38,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Implementation\Comunicator.cs" />
-    <Compile Include="Implementation\IComunicator.cs" />
+    <Compile Include="Implementation\Communicator.cs" />
+    <Compile Include="Implementation\ICommunicator.cs" />
     <Compile Include="Implementation\ISaySmth.cs" />
-    <Compile Include="ComunictaionBrick.cs" />
+    <Compile Include="CommunictaionBrick.cs" />
     <Compile Include="Implementation\HalloWorld.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

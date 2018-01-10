@@ -1,20 +1,20 @@
 ﻿using System;
-using BricksFx.Demo.Module.Implementation;
+using BricksFx.Demo.CommunicationModule.Implementation;
 
 namespace BricksFx.Demo
 {
     public class Application : IApplication
     {
-        private readonly IComunicator _comunicator;
+        private readonly ICommunicator _communicator;
 
-        public Application(IComunicator comunicator)
+        public Application(ICommunicator communicator)
         {
-            _comunicator = comunicator;
+            _communicator = communicator;
         }
 
         public void Run()
         {
-            Console.WriteLine(_comunicator.Comunicate());
+            Console.WriteLine(_communicator.Comunicate());
             Console.ReadLine();
         }
     }

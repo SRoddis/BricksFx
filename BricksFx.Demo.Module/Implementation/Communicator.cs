@@ -1,10 +1,10 @@
-﻿namespace BricksFx.Demo.Module.Implementation
+﻿namespace BricksFx.Demo.CommunicationModule.Implementation
 {
-    internal class Comunicator : IComunicator
+    internal class Communicator : ICommunicator
     {
         private readonly ISaySmth _saySmth;
 
-        public Comunicator(ISaySmth saySmth)
+        public Communicator(ISaySmth saySmth)
         {
             _saySmth = saySmth;
         }

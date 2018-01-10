@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using BricksFx.Core;
 using BricksFx.Core.Module;
-using BricksFx.Demo.Module;
+using BricksFx.Demo.CommunicationModule;
 using BricksFx.DI.Container;
 
 namespace BricksFx.Demo
@@ -17,7 +17,7 @@ namespace BricksFx.Demo
         {
             return new IBrick[]
             {
-                new ComunictaionBrick()
+                new CommunictaionBrick()
             };
         }
     }

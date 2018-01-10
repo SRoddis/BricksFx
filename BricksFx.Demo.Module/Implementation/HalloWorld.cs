@@ -1,4 +1,4 @@
-﻿namespace BricksFx.Demo.Module.Implementation
+﻿namespace BricksFx.Demo.CommunicationModule.Implementation
 {
     internal class HelloWorld : ISaySmth
     {      

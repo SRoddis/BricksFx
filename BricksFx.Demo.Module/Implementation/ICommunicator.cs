@@ -1,7 +1,7 @@
 ﻿namespace BricksFx.Demo.CommunicationModule.Implementation
 {
-    public interface ISaySmth
+    public interface ICommunicator
     {
-        string Say();
+        string Comunicate();
     }
 }
