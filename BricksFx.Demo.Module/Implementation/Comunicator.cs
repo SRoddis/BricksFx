@@ -1,6 +1,6 @@
 ﻿namespace BricksFx.Demo.Module.Implementation
 {
-    public class Comunicator : IComunicator
+    internal class Comunicator : IComunicator
     {
         private readonly ISaySmth _saySmth;
 

@@ -1,6 +1,6 @@
 ﻿namespace BricksFx.Demo.Module.Implementation
 {
-    public class HelloWorld : ISaySmth
+    internal class HelloWorld : ISaySmth
     {      
         public string Say()
         {

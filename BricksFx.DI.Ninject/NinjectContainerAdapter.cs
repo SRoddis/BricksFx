@@ -8,9 +8,9 @@ namespace BricksFx.DI.Ninject
 {
     public class NinjectContainerAdapter : AbstractContainerAdapter
     {
-        private readonly IKernelConfiguration _kernel;
+        private readonly IKernel _kernel;
 
-        public NinjectContainerAdapter(IKernelConfiguration kernel)
+        public NinjectContainerAdapter(IKernel kernel)
         {
             _kernel = kernel;
         }
