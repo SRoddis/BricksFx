@@ -41,7 +41,7 @@
     <Compile Include="Implementation\Comunicator.cs" />
     <Compile Include="Implementation\IComunicator.cs" />
     <Compile Include="Implementation\ISaySmth.cs" />
-    <Compile Include="ComunictaionModule.cs" />
+    <Compile Include="ComunictaionBrick.cs" />
     <Compile Include="Implementation\HalloWorld.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

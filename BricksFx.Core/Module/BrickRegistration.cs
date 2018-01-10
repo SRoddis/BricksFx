@@ -4,20 +4,20 @@ using BricksFx.DI.Dependency;
 
 namespace BricksFx.Core.Module
 {
-    public class ModuleRegistration : IModuleRegistration
+    public class BrickRegistration : IBrickRegistration
     {
         private readonly IContainerAdapter _containerAdapter;
 
-        public ModuleRegistration(IContainerAdapter containerAdapter)
+        public BrickRegistration(IContainerAdapter containerAdapter)
         {
             _containerAdapter = containerAdapter;
         }
 
-        public void RegisterModules(IEnumerable<IModule> modules)
+        public void Register(IEnumerable<IBrick> bricks)
         {
             var mergedDependencies = new List<IDependency>();
 
-            foreach (var module in modules) mergedDependencies.AddRange(module.Dependencies);
+            foreach (var brick in bricks) mergedDependencies.AddRange(brick.Dependencies);
 
             _containerAdapter.Register(mergedDependencies);
         }

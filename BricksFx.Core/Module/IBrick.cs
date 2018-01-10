@@ -3,10 +3,10 @@ using BricksFx.DI.Dependency;
 
 namespace BricksFx.Core.Module
 {
-    public interface IModule
+    public interface IBrick
     {
         IList<IDependency> Dependencies { get; }
         
-        void ProvideDependencies();
+        void ExposeDependencies();
     }
 }

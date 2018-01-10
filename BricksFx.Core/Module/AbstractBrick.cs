@@ -4,22 +4,22 @@ using BricksFx.DI.Dependency;
 
 namespace BricksFx.Core.Module
 {
-    public abstract class AbstractModule : IModule
+    public abstract class AbstractBrick : IBrick
     {
-        protected AbstractModule()
+        protected AbstractBrick()
         {
             Dependencies = new List<IDependency>();
         }
 
         public IList<IDependency> Dependencies { get; }
 
-        protected void RegisterDependency<TInterface, TClass>(LifeTime lifeTime = LifeTime.Transient)
+        protected void Expose<TInterface, TClass>(LifeTime lifeTime = LifeTime.Transient)
             where TInterface : class
             where TClass : class
         {
             Dependencies.Add(new Dependency(typeof(TInterface), typeof(TClass), lifeTime));
         }
 
-        public abstract void ProvideDependencies();
+        public abstract void ExposeDependencies();
     }
 }

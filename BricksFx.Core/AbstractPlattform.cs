@@ -6,22 +6,22 @@ namespace BricksFx.Core
 {
     public abstract class AbstractPlattform : IPlattform
     {
-        private readonly IModuleRegistration _moduleRegistration;
+        private readonly IBrickRegistration _brickRegistration;
 
         protected AbstractPlattform(IContainerAdapter containerAdapter)
         {
-            _moduleRegistration = new ModuleRegistration(containerAdapter);
+            _brickRegistration = new BrickRegistration(containerAdapter);
         }
 
         public void Mount()
         {
-            var modules = PatchModules();
+            var bricks = PatchBricks();
 
-            foreach (var module in modules) module.ProvideDependencies();
+            foreach (var brick in bricks) brick.ExposeDependencies();
 
-            _moduleRegistration.RegisterModules(modules);
+            _brickRegistration.Register(bricks);
         }
 
-        protected abstract IEnumerable<IModule> PatchModules();
+        protected abstract IEnumerable<IBrick> PatchBricks();
     }
 }

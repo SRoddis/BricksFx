@@ -40,10 +40,10 @@
   <ItemGroup>
     <Compile Include="AbstractPlattform.cs" />
     <Compile Include="IPlattform.cs" />
-    <Compile Include="Module\IModule.cs" />
-    <Compile Include="Module\AbstractModule.cs" />
-    <Compile Include="Module\IModuleRegistration.cs" />
-    <Compile Include="Module\ModuleRegistration.cs" />
+    <Compile Include="Module\IBrick.cs" />
+    <Compile Include="Module\AbstractBrick.cs" />
+    <Compile Include="Module\IBrickRegistration.cs" />
+    <Compile Include="Module\BrickRegistration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

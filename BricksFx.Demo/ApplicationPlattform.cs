@@ -6,18 +6,18 @@ using BricksFx.DI.Container;
 
 namespace BricksFx.Demo
 {
-    public class DemoPlattform : AbstractPlattform
+    public class ApplicationPlattform : AbstractPlattform
     {
-        public DemoPlattform(IContainerAdapter containerAdapter)
+        public ApplicationPlattform(IContainerAdapter containerAdapter)
             : base(containerAdapter)
         {
         }
 
-        protected override IEnumerable<IModule> PatchModules()
+        protected override IEnumerable<IBrick> PatchBricks()
         {
-            return new IModule[]
+            return new IBrick[]
             {
-                new ComunictaionModule()
+                new ComunictaionBrick()
             };
         }
     }
