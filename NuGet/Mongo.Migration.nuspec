@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Mongo.Migration</id>
+    <id>BricksFx.Core</id>
     <version>$version$</version>
     <authors>Sean Roddis (@sroddis)</authors>
-    <licenseUrl>https://github.com/SRoddis/Mongo.Migration/blob/master/LICENSE.txt</licenseUrl>
-    <projectUrl>https://github.com/SRoddis/Mongo.Migration</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/SRoddis/Mongo.Migration/master/NuGet/nuget.jpg</iconUrl>
+    <licenseUrl>https://github.com/SRoddis/BricksFx/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/SRoddis/BricksFx</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/SRoddis/BricksFx/master/NuGet/nuget.jpg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Mongo.Migration is designed for MongoDB C# Driver to migrate your documents easily on-the-fly.</description>
-    <copyright>Copyright 2017 Sean Roddis</copyright>
-    <tags>mongodb mongo migration schema web dotnet schema-migration csharp</tags>
+    <description>BricksFx is designed to write independent modules that can be reutilized easily.</description>
+    <copyright>Copyright 2018 Sean Roddis</copyright>
+    <tags>bricksfx modules modularise framework dotnet csharp</tags>
     <dependencies>
       <dependency id="LightInject" version="5.0.3" />
       <dependency id="MongoDB.Bson" version="2.4.4" />

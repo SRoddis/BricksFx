@@ -28,6 +28,14 @@ ProjectSection(SolutionItems) = preProject
 EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{CF9D5D41-1E5A-49E0-8C39-9C7DC5E9D317}"
+ProjectSection(SolutionItems) = preProject
+	NuGet\Mongo.Migration.nuspec = NuGet\Mongo.Migration.nuspec
+	NuGet\NuGet.exe = NuGet\NuGet.exe
+	NuGet\pack.ps1 = NuGet\pack.ps1
+	NuGet\nuget.jpg = NuGet\nuget.jpg
+EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BricksFx.Di.Ninject.Test", "BricksFx.Di.Ninject.Test\BricksFx.Di.Ninject.Test.csproj", "{9DE5AFEE-ECD9-4B58-B1CC-F3C1519F8CDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +67,10 @@ Global
 		{D929B8F2-2BC9-46D9-9F16-3FFE42264B38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D929B8F2-2BC9-46D9-9F16-3FFE42264B38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D929B8F2-2BC9-46D9-9F16-3FFE42264B38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DE5AFEE-ECD9-4B58-B1CC-F3C1519F8CDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DE5AFEE-ECD9-4B58-B1CC-F3C1519F8CDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DE5AFEE-ECD9-4B58-B1CC-F3C1519F8CDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DE5AFEE-ECD9-4B58-B1CC-F3C1519F8CDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{61420AAB-ED14-41A0-A8A6-4A5ABFEEEAC5} = {95523BC3-5CC7-4557-828B-D31BDF1D75CF}
