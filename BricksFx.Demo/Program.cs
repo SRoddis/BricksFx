@@ -33,7 +33,7 @@ namespace BricksFx.Demo
             var adapter = new NinjectContainerAdapter(container);
             var plattform = new ApplicationPlattform(adapter);
 
-            plattform.Mount();
+            plattform.StartUp();
         }
     }
 }

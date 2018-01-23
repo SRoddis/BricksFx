@@ -7,6 +7,6 @@ namespace BricksFx.Core.Module
     {
         IList<IDependency> Dependencies { get; }
         
-        void ExposeDependencies();
+        void BindDependencies();
     }
 }

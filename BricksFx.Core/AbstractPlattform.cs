@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using BricksFx.Core.Module;
 using BricksFx.DI.Container;
 
@@ -13,15 +14,15 @@ namespace BricksFx.Core
             _brickRegistration = new BrickRegistration(containerAdapter);
         }
 
-        public void Mount()
+        public void StartUp()
         {
-            var bricks = PatchBricks();
+            var bricks = ApplyBricks().ToList();
 
-            foreach (var brick in bricks) brick.ExposeDependencies();
+            foreach (var brick in bricks) brick.BindDependencies();
 
             _brickRegistration.Register(bricks);
         }
 
-        protected abstract IEnumerable<IBrick> PatchBricks();
+        protected abstract IEnumerable<IBrick> ApplyBricks();
     }
 }

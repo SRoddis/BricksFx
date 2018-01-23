@@ -2,6 +2,6 @@
 {
     public interface IPlattform
     {
-        void Mount();
+        void StartUp();
     }
 }

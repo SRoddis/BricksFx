@@ -5,10 +5,10 @@ namespace BricksFx.Demo.CommunicationModule
 {
     public class CommunictaionBrick : AbstractBrick
     {
-        public override void ExposeDependencies()
+        public override void BindDependencies()
         {
-            Expose<ICommunicator, Communicator>();
-            Expose<ISaySmth, HelloWorld>();
+            Bind<ICommunicator, Communicator>();
+            Bind<ISaySmth, HelloWorld>();
         }
     }
 }

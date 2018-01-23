@@ -13,13 +13,13 @@ namespace BricksFx.Core.Module
 
         public IList<IDependency> Dependencies { get; }
 
-        protected void Expose<TInterface, TClass>(LifeTime lifeTime = LifeTime.Transient)
+        protected void Bind<TInterface, TClass>(LifeTime lifeTime = LifeTime.Transient)
             where TInterface : class
             where TClass : class
         {
             Dependencies.Add(new Dependency(typeof(TInterface), typeof(TClass), lifeTime));
         }
 
-        public abstract void ExposeDependencies();
+        public abstract void BindDependencies();
     }
 }

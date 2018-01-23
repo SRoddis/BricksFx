@@ -13,7 +13,7 @@ namespace BricksFx.Demo
         {
         }
 
-        protected override IEnumerable<IBrick> PatchBricks()
+        protected override IEnumerable<IBrick> ApplyBricks()
         {
             return new IBrick[]
             {
