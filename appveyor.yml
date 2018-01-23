@@ -1,0 +1,36 @@
+version: 1.0.{build}
+
+environment:
+  COVERALLS_REPO_TOKEN:
+    secure: TDhTT9zQKPO1Hou+HKeTgQYmBjR4HmrQpd0aY0Og/hPXleZyv7x5V/rV3NCC6DMw
+
+assembly_info:
+  patch: true
+  file: AssemblyInfo.*
+  assembly_version: "{version}"
+  assembly_file_version: "{version}"
+  assembly_informational_version: "{version}"
+
+configuration: Release
+
+build:
+  project: BricksFx.sln
+
+before_build:
+  - nuget restore
+
+after_test:
+   - ps: .\nuget\pack.ps1
+   - cmd: .\post_build.cmd
+
+artifacts:
+  - path: BricksFx.Core\bin\Release\BricksFx.Core.dll
+    name: BricksFx.Core.dll
+  - path: '**\BricksFx.*.nupkg'
+
+#uncomment to publish to NuGet
+#deploy:
+#  provider: NuGet
+#  api_key:
+#    secure: U9STqjDjIz1j/0PFSPM0sCYt+0WTU3Cx5w1cw06RWIdPeXZUmCq2nScvhimnQ9NH
+#  artifact: /.*\.nupkg/
