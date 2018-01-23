@@ -35,7 +35,7 @@ ProjectSection(SolutionItems) = preProject
 	NuGet\nuget.jpg = NuGet\nuget.jpg
 EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BricksFx.Di.Ninject.Test", "BricksFx.Di.Ninject.Test\BricksFx.Di.Ninject.Test.csproj", "{9DE5AFEE-ECD9-4B58-B1CC-F3C1519F8CDD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BricksFx.DI.Ninject.Test", "BricksFx.DI.Ninject.Test\BricksFx.DI.Ninject.Test.csproj", "{9DE5AFEE-ECD9-4B58-B1CC-F3C1519F8CDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
