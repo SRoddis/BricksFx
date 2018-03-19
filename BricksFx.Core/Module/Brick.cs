@@ -4,9 +4,9 @@ using BricksFx.DI.Dependency;
 
 namespace BricksFx.Core.Module
 {
-    public abstract class AbstractBrick : IBrick
+    public abstract class Brick : IBrick
     {
-        protected AbstractBrick()
+        protected Brick()
         {
             Dependencies = new List<IDependency>();
         }

@@ -3,7 +3,7 @@ using BricksFx.Demo.CommunicationModule.Implementation;
 
 namespace BricksFx.Demo.CommunicationModule
 {
-    public class CommunictaionBrick : AbstractBrick
+    public class CommunictaionBrick : Brick
     {
         public override void BindDependencies()
         {
