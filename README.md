@@ -4,8 +4,6 @@
 
 `"Keep your code away from your Framework and DI-Container"`
 
-<img src="https://media.giphy.com/media/wi8Ez1mwRcKGI/giphy.gif" width="200">
-
 * What? `BricksFx` will help you to cut your Application in to small Modules (Bricks) and you can easily reused your Code in another Project.  
 * How? Just seed up a `IPlattform` where you can stick your Bricks together. Just like Lego-Bricks... KISS!
 * Why? Because I'am a programmer for a long time and everyone was/is talking about reusability, but I am honest... I have rarely seen Programmers reusing Code, because it was to deep embedded.
