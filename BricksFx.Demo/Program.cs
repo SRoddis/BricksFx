@@ -1,4 +1,6 @@
-﻿using BricksFx.DI.Ninject;
+﻿using BricksFx.Core;
+using BricksFx.DI.Container;
+using BricksFx.DI.Ninject;
 using Ninject;
 
 namespace BricksFx.Demo
@@ -26,12 +28,15 @@ namespace BricksFx.Demo
         private static void BindApplicationDependencies(IKernel container)
         {
             container.Bind<IApplication>().To<Application>();
+            
+            // BricksFx
+            container.Bind<IContainerAdapter>().To<NinjectContainerAdapter>();
+            container.Bind<IPlattform>().To<ApplicationPlattform>();
         }
 
         private static void MountBricks(IKernel container)
         {
-            var adapter = new NinjectContainerAdapter(container);
-            var plattform = new ApplicationPlattform(adapter);
+            var plattform = container.Get<IPlattform>();
 
             plattform.StartUp();
         }
