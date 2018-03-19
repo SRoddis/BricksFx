@@ -2,6 +2,8 @@
 using BricksFx.DI.Container;
 using BricksFx.DI.Dependency;
 using Ninject;
+using Ninject.Extensions.Factory;
+using Ninject.Syntax;
 using Ninject.Web.Common;
 
 namespace BricksFx.DI.Ninject
@@ -19,12 +21,36 @@ namespace BricksFx.DI.Ninject
         {
             foreach (var dependency in dependencies)
             {
-                var binding = _kernel.Bind(dependency.Interface).To(dependency.Implementation);
+                if (dependency is INinjectDependency)
+                {
+                    HandleNinjectDependency(dependency as INinjectDependency);
+                    continue;
+                }
 
-                if (dependency.LifeTime == LifeTime.Singleton) binding.InSingletonScope();
-
-                if (dependency.LifeTime == LifeTime.OnRequest) binding.InRequestScope();
+                HandleDependency(dependency);
             }
+        }
+
+        private void HandleNinjectDependency(INinjectDependency dependency)
+        {
+            if (dependency.IsFactory)
+            {
+                _kernel.Bind(dependency.Interface).ToFactory();
+                return;
+            }
+
+            HandleDependency(dependency).Named(dependency.Name);
+        }
+
+        private IBindingNamedWithOrOnSyntax<object> HandleDependency(IDependency dependency)
+        {
+            var binding = _kernel.Bind(dependency.Interface).To(dependency.Implementation);
+
+            if (dependency.LifeTime == LifeTime.Singleton) binding.InSingletonScope();
+
+            if (dependency.LifeTime == LifeTime.OnRequest) binding.InRequestScope();
+
+            return binding as IBindingNamedWithOrOnSyntax<object>;
         }
     }
 }
