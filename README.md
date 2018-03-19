@@ -4,7 +4,7 @@
 
 `"Keep your code away from your Framework and DI-Container"`
 
-![](https://media.giphy.com/media/3o6gb2QV3meosD8jkI/giphy.gif)
+![](https://media.giphy.com/media/3o6gb2QV3meosD8jkI/giphy.gif  =50x25)
 
 What? `BricksFx` will help you to cut your Application in to small Modules (Bricks) and you can easily reused your Code in another Project.  
 How? Just seed up a `IPlattform` where you can stick your Bricks together. Just like Lego-Bricks... KISS!
@@ -49,6 +49,10 @@ PM> Install-Package BricksFx
             };
         }
     }
+    
+    ```
+    
+    ```csharp
         
     public class Program
     {
@@ -86,16 +90,28 @@ PM> Install-Package BricksFx
         }
     }
     
+    ```
+    
+    ```csharp
+    
     // Rest of the Implementation
     public interface ISaySmth
     {
         string Say();
     }
     
+    ```
+    
+    ```csharp
+    
     public interface ICommunicator
     {
         string Comunicate();
     }
+    
+    ```
+    
+    ```csharp
     
     internal class HelloWorld : ISaySmth
     {      
@@ -104,6 +120,10 @@ PM> Install-Package BricksFx
             return "Hello World!";
         }
     }
+    
+    ```
+    
+    ```csharp
     
     internal class Communicator : ICommunicator
     {
