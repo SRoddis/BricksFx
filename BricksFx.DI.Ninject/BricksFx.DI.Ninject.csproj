@@ -50,7 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="INinjectDependency.cs" />
+    <Compile Include="INinjectNamedDependency.cs" />
     <Compile Include="INinjectDependencyFactory.cs" />
     <Compile Include="NinjectBrick.cs" />
     <Compile Include="NinjectContainerAdapter.cs" />

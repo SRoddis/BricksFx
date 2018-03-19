@@ -2,7 +2,7 @@
 
 namespace BricksFx.DI.Ninject
 {
-    public interface INinjectDependency : IDependency
+    public interface INinjectNamedDependency : IDependency
     {
         string Name { get; }
     }

@@ -2,7 +2,7 @@
 
 namespace BricksFx.DI.Ninject
 {
-    public class NinjectNamedDependency : Dependency.Dependency, INinjectDependency
+    public class NinjectNamedDependency : Dependency.Dependency, INinjectNamedDependency
     {
         public NinjectNamedDependency(Type @interface, Type implementation, LifeTime lifeTime, string depandanyName)
             : base(@interface, implementation, lifeTime)

@@ -27,9 +27,9 @@ namespace BricksFx.DI.Ninject
                     continue;
                 }
 
-                if (dependency is INinjectDependency)
+                if (dependency is INinjectNamedDependency)
                 {
-                    HandleNinjectDependency(dependency as INinjectDependency);
+                    HandleNinjectDependency(dependency as INinjectNamedDependency);
                     continue;
                 }
 
@@ -42,9 +42,9 @@ namespace BricksFx.DI.Ninject
             _kernel.Bind(dependency.Interface).ToFactory(dependency.Interface);
         }
 
-        private void HandleNinjectDependency(INinjectDependency dependency)
+        private void HandleNinjectDependency(INinjectNamedDependency namedDependency)
         {
-            HandleDependency(dependency).Named(dependency.Name);
+            HandleDependency(namedDependency).Named(namedDependency.Name);
         }
 
         private IBindingNamedWithOrOnSyntax<object> HandleDependency(IDependency dependency)
