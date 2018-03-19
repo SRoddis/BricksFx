@@ -54,7 +54,9 @@
     <Compile Include="NinjectContainerAdapter_when_register_ninject_dependencies_with_lifetime.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestClasses\ITestClass.cs" />
+    <Compile Include="TestClasses\ITestClassFactory.cs" />
     <Compile Include="TestClasses\TestClass.cs" />
+    <Compile Include="TestClasses\TestClassFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -51,9 +51,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="INinjectDependency.cs" />
+    <Compile Include="INinjectDependencyFactory.cs" />
     <Compile Include="NinjectBrick.cs" />
     <Compile Include="NinjectContainerAdapter.cs" />
-    <Compile Include="NinjectDependency.cs" />
+    <Compile Include="NinjectNamedDependency.cs" />
+    <Compile Include="NinjectDependencyFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

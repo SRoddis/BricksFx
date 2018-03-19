@@ -5,7 +5,5 @@ namespace BricksFx.DI.Ninject
     public interface INinjectDependency : IDependency
     {
         string Name { get; }
-
-        bool IsFactory { get; }
     }
 }

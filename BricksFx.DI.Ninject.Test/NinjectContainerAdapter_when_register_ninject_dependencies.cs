@@ -24,24 +24,47 @@ namespace BricksFx.Di.Ninject.Test
         private NinjectContainerAdapter _adapter;
 
         [Test]
-        public void WHEN_register_by_name_THEN_correct_implementation_is_returned()
+        public void WHEN_register_by_name_and_use_factory_THEN_correct_implementation_is_returned()
         {
             // Arrange
             var dependencies = new IDependency[]
             {
-                new NinjectDependency(typeof(ITestClass), typeof(TestClass), LifeTime.OnRequest, typeof(TestClass).Name),
-                new NinjectDependency(typeof(ITestClass), typeof(TestClassTwo), LifeTime.OnRequest, typeof(TestClassTwo).Name)
+                new Dependency(typeof(ITestClassFactory), typeof(TestClassFactory), LifeTime.Singleton),
+                new NinjectNamedDependency(typeof(ITestClass), typeof(TestClass), LifeTime.OnRequest, typeof(TestClass).Name),
+                new NinjectNamedDependency(typeof(ITestClass), typeof(TestClassTwo), LifeTime.OnRequest, typeof(TestClassTwo).Name)
             };
 
             // Act
             _adapter.Register(dependencies);
 
             // Assert
-            var implementationOne = _container.Get<ITestClass>(typeof(TestClass).Name);
+            var factory = _container.Get<ITestClassFactory>();
+
+            var implementationOne = factory.Create(typeof(TestClass).Name);
             implementationOne.Should().BeOfType<TestClass>();
 
-            var implementationTwo = _container.Get<ITestClass>(typeof(TestClassTwo).Name);
+            var implementationTwo = factory.Create(typeof(TestClassTwo).Name);
             implementationTwo.Should().BeOfType<TestClassTwo>();
+        }
+
+        [Test]
+        public void WHEN_use_auto_factory_THEN_correct_implementation_is_returned()
+        {
+            // Arrange
+            var dependencies = new IDependency[]
+            {
+                new NinjectDependencyFactory(typeof(ITestClassFactory)),
+                new Dependency(typeof(ITestClass), typeof(TestClass), LifeTime.OnRequest)
+            };
+
+            // Act
+            _adapter.Register(dependencies);
+
+            // Assert
+            var factory = _container.Get<ITestClassFactory>();
+
+            var implementation = factory.Create();
+            implementation.Should().BeOfType<TestClass>();
         }
     }
 }

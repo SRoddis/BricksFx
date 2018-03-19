@@ -8,12 +8,12 @@ namespace BricksFx.DI.Ninject
             where TInterface : class
             where TClass : class
         {
-            Dependencies.Add(new NinjectDependency(typeof(TInterface), typeof(TClass), lifeTime, dependancyName));
+            Dependencies.Add(new NinjectNamedDependency(typeof(TInterface), typeof(TClass), lifeTime, dependancyName));
         }
 
-        protected void BindFactory<TInterface>() where TInterface : class
+        protected void BindFactory<TInterface, TClass>() where TInterface : class
         {
-            Dependencies.Add(new NinjectDependency(typeof(TInterface)));
+            Dependencies.Add(new NinjectDependencyFactory(typeof(TInterface)));
         }
     }
 }
