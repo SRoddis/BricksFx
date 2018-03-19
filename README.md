@@ -4,7 +4,7 @@
 
 `"Keep your code away from your Framework and DI-Container"`
 
-![](https://media.giphy.com/media/3o6gb2QV3meosD8jkI/giphy.gif  =50x25)
+![](https://media.giphy.com/media/3o6gb2QV3meosD8jkI/giphy.gif){ width=50% }
 
 What? `BricksFx` will help you to cut your Application in to small Modules (Bricks) and you can easily reused your Code in another Project.  
 How? Just seed up a `IPlattform` where you can stick your Bricks together. Just like Lego-Bricks... KISS!
