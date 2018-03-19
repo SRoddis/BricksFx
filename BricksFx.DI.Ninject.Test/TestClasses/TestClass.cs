@@ -6,4 +6,9 @@ namespace BricksFx.Di.Ninject.Test.TestClasses
     {
         public string StringValue { get; set; }
     }
+
+    public class TestClassTwo : ITestClass
+    {
+        public string StringValue { get; set; }
+    }
 }

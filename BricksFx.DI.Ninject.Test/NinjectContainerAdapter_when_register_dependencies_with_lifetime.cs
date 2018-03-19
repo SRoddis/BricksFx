@@ -9,7 +9,7 @@ using NUnit.Framework;
 namespace BricksFx.Di.Ninject.Test
 {
     [TestFixture]
-    public class NinjectContainerAdapter_when_register_dependencies
+    public class NinjectContainerAdapter_when_register_dependencies_with_lifetime
     {
         [SetUp]
         public void SetUp()
