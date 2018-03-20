@@ -2,15 +2,19 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/ui3ylss69px8owb1/branch/master?svg=true)](https://ci.appveyor.com/project/SRoddis/bricksfx/branch/master) [![Coverage Status](https://coveralls.io/repos/github/SRoddis/BricksFx/badge.svg?branch=master)](https://coveralls.io/github/SRoddis/BricksFx?branch=master)
 
-<img src="https://raw.githubusercontent.com/SRoddis/BricksFx/master/giphy.gif" width="200">
+---
+
+Build your App Brick by Brick 
 
 ---
 
-Keep your code away from your Framework and DI-Container
+<p align="center">
+    <img src="https://raw.githubusercontent.com/SRoddis/BricksFx/master/giphy.gif" width="200">
+</p>
 
 ---
 
-* What? `BricksFx` will help you to cut your Code into small Bricks (Modules) and make it easy to reused it another Project.  
+* What? `BricksFx` will help you to cut your Code into small Bricks (Modules) and make it easy to reused it another Project. Keep your code away from your Framework and Dependency-Injection-Container.
 * How? Just use `Brick` for your code and seed up a `IPlattform` where you can stick your Bricks (Modules) together. Just like LEGO Bricks... KISS!
 * Why? Because I'am a Programmer and everyone is talking about reusability, but I am honest... I have rarely seen Programmers reusing Code in other Projects. The most of the Time it was to deep embedded.
 
