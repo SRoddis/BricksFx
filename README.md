@@ -42,7 +42,7 @@ PM> Install-Package BricksFx
 
     ```csharp
     
-    // Implement your ApplicationPlattform where can register your Bricks (Modules)
+    // Implement your ApplicationPlattform. In the ApplicationPlattform you can register your Bricks (Modules).
     public class ApplicationPlattform : AbstractPlattform
     {
         public ApplicationPlattform(IContainerAdapter containerAdapter)
@@ -67,7 +67,7 @@ PM> Install-Package BricksFx
     public class Program
     {
     
-        // Excample with ninject
+        // Excample with Ninject
         var container = new StandardKernel();
         container.Bind<IApplication>().To<Application>();
     
@@ -75,7 +75,7 @@ PM> Install-Package BricksFx
         container.Bind<IContainerAdapter>().To<NinjectContainerAdapter>();
         container.Bind<IPlattform>().To<ApplicationPlattform>();
 
-        // BricksFx - StartUp the Plattform to register all your dependencies
+        // BricksFx - StartUp the Plattform to register all the dependencies of the added Bricks
         var plattform = container.Get<IPlattform>();
         plattform.StartUp();
 
