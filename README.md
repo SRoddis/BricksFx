@@ -2,7 +2,11 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/ui3ylss69px8owb1/branch/master?svg=true)](https://ci.appveyor.com/project/SRoddis/bricksfx/branch/master) [![Coverage Status](https://coveralls.io/repos/github/SRoddis/BricksFx/badge.svg?branch=master)](https://coveralls.io/github/SRoddis/BricksFx?branch=master)
 
-`"Keep your code away from your Framework and DI-Container"`
+---
+
+Keep your code away from your Framework and DI-Container
+
+---
 
 * What? `BricksFx` will help you to cut your Code into small Bricks (Modules) and make it easy to reused it another Project.  
 * How? Just use `Brick` for your code and seed up a `IPlattform` where you can stick your Bricks (Modules) together. Just like Lego-Bricks... KISS!
