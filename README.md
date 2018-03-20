@@ -104,7 +104,7 @@ PM> Install-Package BricksFx
     
     ```csharp
     
-    // Rest of the Implementation
+    // Rest of the Demo Implementation
     public interface ISaySmth
     {
         string Say();
