@@ -146,7 +146,7 @@ PM> Install-Package BricksFx
         
     ```
     
-3. Please have a look in the Demo. When you have questions, send me a message or open a issue. 
+3. Please have a look at the Demo. If you have questions, send me a message or open a issue in this repository. 
     
     ## Copyright
     
