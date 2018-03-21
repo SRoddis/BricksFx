@@ -1,4 +1,4 @@
-﻿namespace BricksFx.Demo.CommunicationModule.Implementation
+﻿namespace BricksFx.Demo.CommunicatorModule.Implementation
 {
     internal class Communicator : ICommunicator
     {

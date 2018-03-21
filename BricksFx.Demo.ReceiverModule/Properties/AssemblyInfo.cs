@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("BricksFx.Demo.Module")]
+[assembly: AssemblyTitle("BricksFx.Demo.ReceiverModule")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("BricksFx.Demo.Module")]
+[assembly: AssemblyProduct("BricksFx.Demo.ReceiverModule")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("D929B8F2-2BC9-46D9-9F16-3FFE42264B38")]
+[assembly: Guid("C69830C1-B2EF-4F6F-95BA-B6C44108A244")]
 
 // Version information for an assembly consists of the following four values:
 //

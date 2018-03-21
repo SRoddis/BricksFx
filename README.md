@@ -55,7 +55,8 @@ PM> Install-Package BricksFx
             // Register your Bricks (Modules). How to create a Brick, please see "2. Create a Brick"
             return new IBrick[]
             {
-                new CommunictaionBrick()
+                new CommunicatorBrick(),
+                new ReceiverBrick()
             };
         }
     }
@@ -100,6 +101,14 @@ PM> Install-Package BricksFx
         }
     }
     
+    public class ReceiverBrick : Brick
+    {
+        public override void BindDependencies()
+        {
+            Bind<IReceiver, ConsoleReceiver>();
+        }
+    }
+    
     ```
         
     ```csharp
@@ -119,6 +128,15 @@ PM> Install-Package BricksFx
             return _saySmth.Say();
         }
     }
+    
+    internal class ConsoleReceiver : IReceiver
+    {
+        public void Receive(string message)
+        {
+            Console.WriteLine(message);
+            Console.ReadLine();
+        }
+    }
         
     ```
     
@@ -128,16 +146,20 @@ PM> Install-Package BricksFx
     public class Application : IApplication
     {
         private readonly ICommunicator _communicator;
+        
+        private readonly IReceiver _receiver;
 
-        public Application(ICommunicator communicator)
+        public Application(ICommunicator communicator, IReceiver receiver)
         {
             _communicator = communicator;
+            _receiver = receiver;
         }
 
         public void Run()
         {
-            Console.WriteLine(_communicator.Comunicate());
-            Console.ReadLine();
+            var message = _communicator.Comunicate();
+
+            _receiver.Receive(message);
         }
     }
         

@@ -1,9 +1,9 @@
 ﻿using BricksFx.Core.Module;
-using BricksFx.Demo.CommunicationModule.Implementation;
+using BricksFx.Demo.CommunicatorModule.Implementation;
 
-namespace BricksFx.Demo.CommunicationModule
+namespace BricksFx.Demo.CommunicatorModule
 {
-    public class CommunictaionBrick : Brick
+    public class CommunicatorBrick : Brick
     {
         public override void BindDependencies()
         {

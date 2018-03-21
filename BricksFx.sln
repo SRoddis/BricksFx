@@ -12,8 +12,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BricksFx.Demo", "BricksFx.D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{95523BC3-5CC7-4557-828B-D31BDF1D75CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BricksFx.Demo.Module", "BricksFx.Demo.Module\BricksFx.Demo.Module.csproj", "{D929B8F2-2BC9-46D9-9F16-3FFE42264B38}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{468D7D6F-4C94-49E5-9FDB-345564CEF4D0}"
 ProjectSection(SolutionItems) = preProject
 	post_build.cmd = post_build.cmd
@@ -37,6 +35,10 @@ ProjectSection(SolutionItems) = preProject
 EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BricksFx.DI.Ninject.Test", "BricksFx.DI.Ninject.Test\BricksFx.DI.Ninject.Test.csproj", "{9DE5AFEE-ECD9-4B58-B1CC-F3C1519F8CDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BricksFx.Demo.ReceiverModule", "BricksFx.Demo.ReceiverModule\BricksFx.Demo.ReceiverModule.csproj", "{C69830C1-B2EF-4F6F-95BA-B6C44108A244}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BricksFx.Demo.CommunicatorModule", "BricksFx.Demo.CommunicatorModule\BricksFx.Demo.CommunicatorModule.csproj", "{829B316E-F9BA-4772-9400-0A654EB64468}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -64,17 +66,22 @@ Global
 		{61420AAB-ED14-41A0-A8A6-4A5ABFEEEAC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61420AAB-ED14-41A0-A8A6-4A5ABFEEEAC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61420AAB-ED14-41A0-A8A6-4A5ABFEEEAC5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D929B8F2-2BC9-46D9-9F16-3FFE42264B38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D929B8F2-2BC9-46D9-9F16-3FFE42264B38}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D929B8F2-2BC9-46D9-9F16-3FFE42264B38}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D929B8F2-2BC9-46D9-9F16-3FFE42264B38}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9DE5AFEE-ECD9-4B58-B1CC-F3C1519F8CDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9DE5AFEE-ECD9-4B58-B1CC-F3C1519F8CDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DE5AFEE-ECD9-4B58-B1CC-F3C1519F8CDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DE5AFEE-ECD9-4B58-B1CC-F3C1519F8CDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C69830C1-B2EF-4F6F-95BA-B6C44108A244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C69830C1-B2EF-4F6F-95BA-B6C44108A244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C69830C1-B2EF-4F6F-95BA-B6C44108A244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C69830C1-B2EF-4F6F-95BA-B6C44108A244}.Release|Any CPU.Build.0 = Release|Any CPU
+		{829B316E-F9BA-4772-9400-0A654EB64468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{829B316E-F9BA-4772-9400-0A654EB64468}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{829B316E-F9BA-4772-9400-0A654EB64468}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{829B316E-F9BA-4772-9400-0A654EB64468}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{61420AAB-ED14-41A0-A8A6-4A5ABFEEEAC5} = {95523BC3-5CC7-4557-828B-D31BDF1D75CF}
-		{D929B8F2-2BC9-46D9-9F16-3FFE42264B38} = {95523BC3-5CC7-4557-828B-D31BDF1D75CF}
+		{C69830C1-B2EF-4F6F-95BA-B6C44108A244} = {95523BC3-5CC7-4557-828B-D31BDF1D75CF}
+		{829B316E-F9BA-4772-9400-0A654EB64468} = {95523BC3-5CC7-4557-828B-D31BDF1D75CF}
 	EndGlobalSection
 EndGlobal
