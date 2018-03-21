@@ -52,7 +52,7 @@ PM> Install-Package BricksFx
 
         protected override IEnumerable<IBrick> ApplyBricks()
         {
-            // Register your Bricks (Modules)
+            // Register your Bricks (Modules). How to create a Brick, please see "2. Create a Brick"
             return new IBrick[]
             {
                 new CommunictaionBrick()
