@@ -101,40 +101,10 @@ PM> Install-Package BricksFx
     }
     
     ```
-    
+        
     ```csharp
     
-    // Rest of the Demo Implementation
-    public interface ISaySmth
-    {
-        string Say();
-    }
-    
-    ```
-    
-    ```csharp
-    
-    public interface ICommunicator
-    {
-        string Comunicate();
-    }
-    
-    ```
-    
-    ```csharp
-    
-    internal class HelloWorld : ISaySmth
-    {      
-        public string Say()
-        {
-            return "Hello World!";
-        }
-    }
-    
-    ```
-    
-    ```csharp
-    
+    // Implementation of the Brick (Module)
     internal class Communicator : ICommunicator
     {
         private readonly ISaySmth _saySmth;
@@ -151,6 +121,28 @@ PM> Install-Package BricksFx
     }
         
     ```
+    
+    ```csharp
+    
+    // The defined dependencies can now be injected in the Application
+    public class Application : IApplication
+    {
+        private readonly ICommunicator _communicator;
+
+        public Application(ICommunicator communicator)
+        {
+            _communicator = communicator;
+        }
+
+        public void Run()
+        {
+            Console.WriteLine(_communicator.Comunicate());
+            Console.ReadLine();
+        }
+    }
+        
+    ```
+        
     
 3. Please have a look at the Demo. If you have questions, send me a message or open a issue in this repository. 
     
