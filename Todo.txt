@@ -1,1 +1,6 @@
-Automaticallyupdate on migrated resources if attribute is provided
+1. Add missing test for untestet classes, see https://coveralls.io/github/SRoddis/BricksFx?branch=master
+2. Add support for AutoFac
+3. Add support for Castle Windsor
+4. Add support for Unity
+5. Add support for Spring.NET
+6. Module registration conzept (plattform -> module -> modules)

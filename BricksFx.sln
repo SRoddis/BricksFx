@@ -19,6 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHub", "GitHub", "{583F2F
 		giphy.gif = giphy.gif
 		LICENSE = LICENSE
 		README.md = README.md
+		Todo.txt = Todo.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{CF9D5D41-1E5A-49E0-8C39-9C7DC5E9D317}"

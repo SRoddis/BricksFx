@@ -24,7 +24,6 @@ The key is to keep your business code (logic) away from used frameworks or depen
 
 ### Why? 
 Because you should love your code and tread it like home.
-
 `BricksFx` brings you the possibility to describe your code "`Bricks`".
 You can describe all the interfaces you want to expose and keep the implementation internal.
 The binding mechanism makes it easy to add your code to an existing or new project.
