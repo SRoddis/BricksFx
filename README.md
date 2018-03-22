@@ -19,7 +19,7 @@ Build your Application Brick by Brick
 ### What?
 
 `BricksFx` is a small library, which will help you to structure your code and make it reusable in other projects.
-`BricksFx` allows you to write small and handy `Brick` (modules) that can be seed up easily in new or old projects.
+`BricksFx` allows you to write small and handy `Bricks` (modules) that can be seed up easily in new or old projects.
 The key is to keep your business code (logic) away from used frameworks or dependency-injection-containers.
 
 ### Why? 
@@ -28,7 +28,7 @@ Because you should love your code and tread it like home.
 `BricksFx` brings you the possibility to describe your code "`Bricks`".
 You can describe all the interfaces you want to expose and keep the implementation internal.
 The binding mechanism makes it easy to add your code to an existing or new project.
-The main DI-containers are supported. If you want to use a different one,
+The common DI-containers are supported. If you want to use a different one,
 then you can write a custom `ContainerAdapter`. 
 
 And yes, that means you have to use interfaces. But that is what you should do… always! 
