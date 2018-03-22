@@ -1,4 +1,5 @@
-// BricksFx
+# BricksFx
+
 $root = (split-path -parent $MyInvocation.MyCommand.Definition) + '\..'
 $version = [System.Reflection.Assembly]::LoadFile("$root\BricksFx\bin\Release\BricksFx.dll").GetName().Version
 $versionStr = "{0}.{1}.{2}" -f ($version.Major, $version.Minor, $version.Build)
@@ -12,7 +13,8 @@ $content | Out-File $root\nuget\BricksFx.compiled.nuspec
 
 & $root\NuGet\NuGet.exe pack $root\nuget\BricksFx.compiled.nuspec
 
-// BricksFx.Ninject
+# BricksFx.Ninject
+
 $root = (split-path -parent $MyInvocation.MyCommand.Definition) + '\..'
 $version = [System.Reflection.Assembly]::LoadFile("$root\BricksFx.Ninject\bin\Release\BricksFx.Ninject.dll").GetName().Version
 $versionStr = "{0}.{1}.{2}" -f ($version.Major, $version.Minor, $version.Build)

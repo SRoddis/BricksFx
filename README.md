@@ -14,6 +14,8 @@ Build your Application Brick by Brick
 
 ---
 
+# Introduction
+
 ### What?
 
 `BricksFx` is a small library, which will help you to structure your code and make it reusable in other projects.
@@ -33,24 +35,26 @@ And yes, that means you have to use interfaces. But that is what you should doâ€
 
 ### How?
 Define a `Brick` for the code you want to write, bind the dependencies you want to expose and seed
-up an `IPlattform` where you can stick new and old bricks (modules) together. 
+up an `IPlattform` where you can stick new and old `Bricks` (modules) together. 
 It should be as easy as building LEGO-Bricksâ€¦ KISS!
 
-# Installation
 
-<!--- 
+# Installation
 
 Install via nuget https://www.nuget.org/packages/BricksFx
 
 (Optional)
 
 Install via nuget https://www.nuget.org/packages/BricksFx.Ninject 
+
 ```
 PM> Install-Package BricksFx 
 
-```
+(Optional)
 
--->
+PM> Install-Package BricksFx.Ninject
+
+```
 
 # How to use
 
