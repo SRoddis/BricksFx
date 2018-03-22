@@ -27,6 +27,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{CF9D5D41
 		NuGet\NuGet.exe = NuGet\NuGet.exe
 		NuGet\nuget.jpg = NuGet\nuget.jpg
 		NuGet\pack.ps1 = NuGet\pack.ps1
+		NuGet\BricksFx.Ninject.nuspec = NuGet\BricksFx.Ninject.nuspec
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BricksFx.Demo.ReceiverModule", "BricksFx.Demo.ReceiverModule\BricksFx.Demo.ReceiverModule.csproj", "{C69830C1-B2EF-4F6F-95BA-B6C44108A244}"

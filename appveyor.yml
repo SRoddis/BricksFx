@@ -26,7 +26,11 @@ after_test:
 artifacts:
   - path: BricksFx\bin\Release\BricksFx.dll
     name: BricksFx.dll
-  - path: '**\BricksFx.*.nupkg'
+  - path: '**\BricksFx.nupkg'
+  
+  - path: BricksFx.Ninject\bin\Release\BricksFx.Ninject.dll
+    name: BricksFx.Ninject.dll
+  - path: '**\BricksFx.Ninject.nupkg'
 
 #uncomment to publish to NuGet
 #deploy:

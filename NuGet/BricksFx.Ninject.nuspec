@@ -1,17 +1,21 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>BricksFx</id>
+    <id>BricksFx.Ninject</id>
     <version>$version$</version>
     <authors>Sean Roddis (@sroddis)</authors>
     <licenseUrl>https://github.com/SRoddis/BricksFx/blob/master/LICENSE.txt</licenseUrl>
     <projectUrl>https://github.com/SRoddis/BricksFx</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/SRoddis/BricksFx/master/NuGet/nuget.jpg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>BricksFx is designed to write independent modules that can be reutilized easily.</description>
+    <description>BricksFx.Ninject is the adapter for ninject di-container.</description>
     <copyright>Copyright 2018 Sean Roddis</copyright>
     <tags>bricksfx modules modularise framework dotnet csharp library architecture</tags>
     <dependencies>
+      <dependency id="Castle.Core" version="4.0.0.0" />
+      <dependency id="Ninject" version="3.3.3.0" />
+      <dependency id="Ninject.Extensions.Factory" version="3.3.2.0" />
+      <dependency id="Ninject.Web.Common" version="3.3.0" />
     </dependencies>
   </metadata>
   <files>

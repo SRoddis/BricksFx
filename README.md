@@ -4,7 +4,7 @@
 
 ---
 
-Build your App Brick by Brick 
+Build your Application Brick by Brick
 
 ---
 
@@ -14,21 +14,37 @@ Build your App Brick by Brick
 
 ---
 
-* What? `BricksFx` will help you to cut your Code into small Bricks (Modules) and make it easy to reused it another Project. Keep your code away from your Framework and Dependency-Injection-Container.
-* How? Just use `Brick` for your code and seed up a `IPlattform` where you can stick your Bricks (Modules) together. Just like LEGO Bricks... KISS!
-* Why? Because I'am a Programmer and everyone is talking about reusability, but I am honest... I have rarely seen Programmers reusing Code in other Projects. The most of the Time it was to deep embedded.
+### What?
+
+`BricksFx` is a small library, which will help you to structure your code and make it reusable in other projects.
+`BricksFx` allows you to write small and handy `Brick` (modules) that can be seed up easily in new or old projects.
+The key is to keep your business code (logic) away from used frameworks or dependency-injection-containers.
+
+### Why? 
+Because you should love your code and tread it like home.
+
+`BricksFx` brings you the possibility to describe your code "`Bricks`".
+You can describe all the interfaces you want to expose and keep the implementation internal.
+The binding mechanism makes it easy to add your code to an existing or new project.
+The main DI-containers are supported. If you want to use a different one,
+then you can write a custom `ContainerAdapter`. 
+
+And yes, that means you have to use interfaces. But that is what you should do… always! 
+
+### How?
+Define a `Brick` for the code you want to write, bind the dependencies you want to expose and seed
+up an `IPlattform` where you can stick new and old bricks (modules) together. 
+It should be as easy as building LEGO-Bricks… KISS!
 
 # Installation
 
 <!--- 
 
-Install via nuget https://www.nuget.org/packages/BricksFx.Core
-
-Install via nuget https://www.nuget.org/packages/BricksFx.DI
+Install via nuget https://www.nuget.org/packages/BricksFx
 
 (Optional)
 
-Install via nuget https://www.nuget.org/packages/BricksFx.DI.Ninject 
+Install via nuget https://www.nuget.org/packages/BricksFx.Ninject 
 ```
 PM> Install-Package BricksFx 
 
