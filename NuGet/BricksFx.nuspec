@@ -12,15 +12,15 @@
     <copyright>Copyright 2018 Sean Roddis</copyright>
     <tags>bricksfx modules modularise framework dotnet csharp</tags>
     <dependencies>
-      <dependency id="LightInject" version="5.0.3" />
-      <dependency id="MongoDB.Bson" version="2.4.4" />
-      <dependency id="MongoDB.Driver" version="2.4.4" />
-      <dependency id="MongoDB.Driver.Core" version="2.4.4" />
+      <dependency id="Castle.Core" version="4.0.0.0" />
+      <dependency id="Ninject" version="3.3.3.0" />
+      <dependency id="Ninject.Extensions.Factory" version="3.3.2.0" />
+      <dependency id="Ninject.Web.Common" version="3.3.0" />
     </dependencies>
   </metadata>
   <files>
-    <file src="..\Mongo.Migration\bin\Release\Mongo.Migration.dll" target="lib\portable-windows8+net45" />
-    <file src="..\Mongo.Migration\bin\Release\Mongo.Migration.dll" target="lib\portable-net45+win+wp8+wpa81" />
-    <file src="..\Mongo.Migration\bin\Release\Mongo.Migration.dll" target="lib\portable-net45+sl50+MonoAndroid10+MonoTouch10" />
+    <file src="..\BricksFx\bin\Release\BricksFx.dll" target="lib\portable-windows8+net45" />
+    <file src="..\BricksFx\bin\Release\BricksFx.dll" target="lib\portable-net45+win+wp8+wpa81" />
+    <file src="..\BricksFx\bin\Release\BricksFx.dll" target="lib\portable-net45+sl50+MonoAndroid10+MonoTouch10" />
   </files>
 </package>
