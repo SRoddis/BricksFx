@@ -27,7 +27,7 @@ namespace BricksFx.Demo
         private static void BindApplicationDependencies(IKernel container)
         {
             container.Bind<IApplication>().To<Application>();
-            
+
             // BricksFx
             container.Bind<IContainerAdapter>().To<NinjectContainerAdapter>();
             container.Bind<IPlattform>().To<ApplicationPlattform>();

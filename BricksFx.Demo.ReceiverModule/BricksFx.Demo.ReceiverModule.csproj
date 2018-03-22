@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BricksFx, Version=1.0.53.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\BricksFx.1.0.53\lib\portable-net45+sl50+MonoAndroid10+MonoTouch10\BricksFx.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
@@ -44,10 +47,7 @@
     <Compile Include="ReceiverBrick.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BricksFx\BricksFx.csproj">
-      <Project>{39E80336-48E4-4952-9357-A21A106939EC}</Project>
-      <Name>BricksFx</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

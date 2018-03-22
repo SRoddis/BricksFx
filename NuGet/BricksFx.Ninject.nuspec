@@ -19,8 +19,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="..\BricksFx\bin\Release\BricksFx.dll" target="lib\portable-windows8+net45" />
-    <file src="..\BricksFx\bin\Release\BricksFx.dll" target="lib\portable-net45+win+wp8+wpa81" />
-    <file src="..\BricksFx\bin\Release\BricksFx.dll" target="lib\portable-net45+sl50+MonoAndroid10+MonoTouch10" />
+    <file src="..\BricksFx.Ninject\bin\Release\BricksFx.Ninject.dll" target="lib\portable-windows8+net45" />
+    <file src="..\BricksFx.Ninject\bin\Release\BricksFx.Ninject.dll" target="lib\portable-net45+win+wp8+wpa81" />
+    <file src="..\BricksFx.Ninject\bin\Release\BricksFx.Ninject.dll" target="lib\portable-net45+sl50+MonoAndroid10+MonoTouch10" />
   </files>
 </package>
