@@ -1,5 +1,5 @@
-﻿using BricksFx.Core.Module;
-using BricksFx.Demo.ReceiverModule.Implementation;
+﻿using BricksFx.Demo.ReceiverModule.Implementation;
+using BricksFx.Module;
 
 namespace BricksFx.Demo.ReceiverModule
 {

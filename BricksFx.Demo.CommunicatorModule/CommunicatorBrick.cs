@@ -1,5 +1,5 @@
-﻿using BricksFx.Core.Module;
-using BricksFx.Demo.CommunicatorModule.Implementation;
+﻿using BricksFx.Demo.CommunicatorModule.Implementation;
+using BricksFx.Module;
 
 namespace BricksFx.Demo.CommunicatorModule
 {

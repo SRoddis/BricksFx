@@ -44,13 +44,9 @@
     <Compile Include="ReceiverBrick.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BricksFx.Core\BricksFx.Core.csproj">
-      <Project>{39e80336-48e4-4952-9357-a21a106939ec}</Project>
-      <Name>BricksFx.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BricksFx.DI\BricksFx.DI.csproj">
-      <Project>{7d81e143-52a8-4db3-bc4c-5e3774a42126}</Project>
-      <Name>BricksFx.DI</Name>
+    <ProjectReference Include="..\BricksFx\BricksFx.csproj">
+      <Project>{39E80336-48E4-4952-9357-A21A106939EC}</Project>
+      <Name>BricksFx</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

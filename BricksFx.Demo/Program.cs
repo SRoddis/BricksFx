@@ -1,6 +1,5 @@
-﻿using BricksFx.Core;
-using BricksFx.DI.Container;
-using BricksFx.DI.Ninject;
+﻿using BricksFx.DI.Container;
+using BricksFx.Ninject;
 using Ninject;
 
 namespace BricksFx.Demo

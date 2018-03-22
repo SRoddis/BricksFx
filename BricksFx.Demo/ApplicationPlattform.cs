@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
-using BricksFx.Core;
-using BricksFx.Core.Module;
 using BricksFx.Demo.CommunicatorModule;
 using BricksFx.Demo.ReceiverModule;
 using BricksFx.DI.Container;
+using BricksFx.Module;
 
 namespace BricksFx.Demo
 {

@@ -24,8 +24,8 @@ after_test:
    - cmd: .\post_build.cmd
 
 artifacts:
-  - path: BricksFx.Core\bin\Release\BricksFx.Core.dll
-    name: BricksFx.Core.dll
+  - path: BricksFx\bin\Release\BricksFx.dll
+    name: BricksFx.dll
   - path: '**\BricksFx.*.nupkg'
 
 #uncomment to publish to NuGet
