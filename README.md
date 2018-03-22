@@ -45,7 +45,6 @@ Install via nuget https://www.nuget.org/packages/BricksFx
 
 ```
 PM> Install-Package BricksFx 
-
 ```
 
 (Optional)
@@ -54,7 +53,6 @@ Install via nuget https://www.nuget.org/packages/BricksFx.Ninject
 
 ```
 PM> Install-Package BricksFx.Ninject
-
 ```
 
 # How to use
