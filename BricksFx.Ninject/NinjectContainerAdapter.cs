@@ -39,7 +39,9 @@ namespace BricksFx.Ninject
 
         private void HandleNinjectDependencyFactory(INinjectDependencyFactory dependency)
         {
-            _kernel.Bind(dependency.Interface).ToFactory(dependency.Interface);
+            var binding = _kernel.Bind(dependency.Interface).ToFactory(dependency.Interface);
+
+            BindLifeTime(dependency, binding);
         }
 
         private void HandleNinjectDependency(INinjectNamedDependency namedDependency)
@@ -49,13 +51,25 @@ namespace BricksFx.Ninject
 
         private IBindingNamedWithOrOnSyntax<object> HandleDependency(IDependency dependency)
         {
-            var binding = _kernel.Bind(dependency.Interface).To(dependency.Implementation);
+            var binding = CreateBinding(dependency);
+            
+            BindLifeTime(dependency, binding);
 
+            return binding as IBindingNamedWithOrOnSyntax<object>;
+        }
+
+        private IBindingWhenInNamedWithOrOnSyntax<object> CreateBinding(IDependency dependency)
+        {
+            if (dependency.Implementation == null) return _kernel.Bind(dependency.Interface).ToSelf();
+
+            return _kernel.Bind(dependency.Interface).To(dependency.Implementation);
+        }
+
+        private static void BindLifeTime(IDependency dependency, IBindingWhenInNamedWithOrOnSyntax<object> binding)
+        {
             if (dependency.LifeTime == LifeTime.Singleton) binding.InSingletonScope();
 
             if (dependency.LifeTime == LifeTime.OnRequest) binding.InRequestScope();
-
-            return binding as IBindingNamedWithOrOnSyntax<object>;
         }
     }
 }
