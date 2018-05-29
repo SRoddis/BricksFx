@@ -60,8 +60,10 @@ namespace BricksFx.Ninject
 
         private IBindingWhenInNamedWithOrOnSyntax<object> CreateBinding(IDependency dependency)
         {
-            if(dependency is IInterfaceDependency interfaceDependency)
+            if (dependency is IInterfaceDependency interfaceDependency)
+            {
                 return _kernel.Bind(interfaceDependency.Interface).To(interfaceDependency.Implementation);
+            }
                 
             return _kernel.Bind(dependency.Implementation).ToSelf();
         }
