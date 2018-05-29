@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel;
 using BricksFx.DI;
 using BricksFx.DI.Container;
 using Ninject;
@@ -66,7 +65,7 @@ namespace BricksFx.Ninject
                 var interfaceDependency = dependency as IInterfaceDependency;
                 return _kernel.Bind(interfaceDependency.Interface).To(interfaceDependency.Implementation);
             }
-                
+
             return _kernel.Bind(dependency.Implementation).ToSelf();
         }
 
