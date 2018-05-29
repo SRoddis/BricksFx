@@ -2,7 +2,7 @@
 
 namespace BricksFx.Ninject
 {
-    public interface INinjectDependencyFactory : IDependency
+    public interface INinjectDependencyFactory : IInterfaceDependency
     {
         bool IsFactory { get; }
     }

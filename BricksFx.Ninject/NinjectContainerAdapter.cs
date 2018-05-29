@@ -52,7 +52,7 @@ namespace BricksFx.Ninject
         private IBindingNamedWithOrOnSyntax<object> HandleDependency(IDependency dependency)
         {
             var binding = CreateBinding(dependency);
-            
+
             BindLifeTime(dependency, binding);
 
             return binding as IBindingNamedWithOrOnSyntax<object>;
@@ -60,9 +60,10 @@ namespace BricksFx.Ninject
 
         private IBindingWhenInNamedWithOrOnSyntax<object> CreateBinding(IDependency dependency)
         {
-            if (dependency.Implementation == null) return _kernel.Bind(dependency.Interface).ToSelf();
-
-            return _kernel.Bind(dependency.Interface).To(dependency.Implementation);
+            if(dependency is IInterfaceDependency interfaceDependency)
+                return _kernel.Bind(interfaceDependency.Interface).To(interfaceDependency.Implementation);
+                
+            return _kernel.Bind(dependency.Implementation).ToSelf();
         }
 
         private static void BindLifeTime(IDependency dependency, IBindingWhenInNamedWithOrOnSyntax<object> binding)

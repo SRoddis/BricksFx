@@ -26,7 +26,7 @@ namespace BricksFx.Ninject.Test
         {
             // Arrange
             var dependencies = new IDependency[]
-                {new Dependency(typeof(ITestClass), typeof(TestClass), LifeTime.OnRequest)};
+                {new InterfaceDependency(typeof(ITestClass), typeof(TestClass), LifeTime.OnRequest), };
 
             // Act
             _adapter.Register(dependencies);
@@ -44,7 +44,7 @@ namespace BricksFx.Ninject.Test
         {
             // Arrange
             var dependencies = new IDependency[]
-                {new Dependency(typeof(ITestClass), typeof(TestClass), LifeTime.Singleton)};
+                {new InterfaceDependency(typeof(ITestClass), typeof(TestClass), LifeTime.Singleton), };
 
             // Act
             _adapter.Register(dependencies);
@@ -62,7 +62,7 @@ namespace BricksFx.Ninject.Test
         {
             // Arrange
             var dependencies = new IDependency[]
-                {new Dependency(typeof(ITestClass), typeof(TestClass), LifeTime.Transient)};
+                {new InterfaceDependency(typeof(ITestClass), typeof(TestClass), LifeTime.Transient), };
 
             // Act
             _adapter.Register(dependencies);
@@ -80,7 +80,7 @@ namespace BricksFx.Ninject.Test
         {
             // Arrange
             var dependencies = new IDependency[]
-                {new Dependency(typeof(ITestClass), typeof(TestClass), LifeTime.Transient)};
+                {new InterfaceDependency(typeof(ITestClass), typeof(TestClass), LifeTime.Transient)};
 
             // Act
             _adapter.Register(dependencies);

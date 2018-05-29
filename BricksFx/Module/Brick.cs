@@ -16,7 +16,7 @@ namespace BricksFx.Module
             where TInterface : class
             where TClass : class
         {
-            Dependencies.Add(new Dependency(typeof(TInterface), typeof(TClass), lifeTime));
+            Dependencies.Add(new InterfaceDependency(typeof(TInterface), typeof(TClass), lifeTime));
         }
 
         public abstract void BindDependencies();

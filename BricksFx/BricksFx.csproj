@@ -43,6 +43,8 @@
     <Compile Include="DI\Container\IContainerAdapter.cs" />
     <Compile Include="DI\Dependency.cs" />
     <Compile Include="DI\IDependency.cs" />
+    <Compile Include="DI\IInterfaceDependency.cs" />
+    <Compile Include="DI\InterfaceDependency.cs" />
     <Compile Include="DI\LifeTime.cs" />
     <Compile Include="IPlattform.cs" />
     <Compile Include="Module\IBrick.cs" />

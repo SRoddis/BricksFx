@@ -3,7 +3,7 @@ using BricksFx.DI;
 
 namespace BricksFx.Ninject
 {
-    public class NinjectNamedDependency : Dependency, INinjectNamedDependency
+    public class NinjectNamedDependency : InterfaceDependency, INinjectNamedDependency
     {
         public NinjectNamedDependency(Type @interface, Type implementation, LifeTime lifeTime, string depandanyName)
             : base(@interface, implementation, lifeTime)

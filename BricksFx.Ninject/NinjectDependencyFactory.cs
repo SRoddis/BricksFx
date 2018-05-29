@@ -3,7 +3,7 @@ using BricksFx.DI;
 
 namespace BricksFx.Ninject
 {
-    public class NinjectDependencyFactory : Dependency, INinjectDependencyFactory
+    public class NinjectDependencyFactory : InterfaceDependency, INinjectDependencyFactory
     {
         public NinjectDependencyFactory(Type @interface)
             : base(@interface, null, LifeTime.Singleton)
