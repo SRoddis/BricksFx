@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 using BricksFx.DI;
 using BricksFx.DI.Container;
 using Ninject;
@@ -60,8 +61,9 @@ namespace BricksFx.Ninject
 
         private IBindingWhenInNamedWithOrOnSyntax<object> CreateBinding(IDependency dependency)
         {
-            if (dependency is IInterfaceDependency interfaceDependency)
+            if (dependency is IInterfaceDependency)
             {
+                var interfaceDependency = dependency as IInterfaceDependency;
                 return _kernel.Bind(interfaceDependency.Interface).To(interfaceDependency.Implementation);
             }
                 
