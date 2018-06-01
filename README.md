@@ -28,6 +28,7 @@ and its needs, the application starts growing. Domains and logic will be added a
 At some point of the development you might determine the need of scaling. Monolithic applications are not bad in general, but they are when it comes to scaling. 
 
 This might be the time where you want to splitt out domains and creat a [BoundedContext](https://martinfowler.com/bliki/BoundedContext.html) in a separate application/service.
+The first 
 
 
 ------------
