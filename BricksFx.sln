@@ -43,6 +43,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BricksFx.Ninject.Test", "Br
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BricksFx.Test", "BricksFx.Test\BricksFx.Test.csproj", "{6DE19E7B-3B13-4431-BDA6-CDD35BFB15A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BricksFx.Autofac", "BricksFx.Autofac\BricksFx.Autofac.csproj", "{F28BF8A4-55F6-410E-89F4-0EACD5A0D3F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BricksFx.Autofac.Test", "BricksFx.Autofac.Test\BricksFx.Autofac.Test.csproj", "{28CFEA4D-D683-4CF5-8E78-6877508F1A8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +81,14 @@ Global
 		{6DE19E7B-3B13-4431-BDA6-CDD35BFB15A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DE19E7B-3B13-4431-BDA6-CDD35BFB15A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DE19E7B-3B13-4431-BDA6-CDD35BFB15A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F28BF8A4-55F6-410E-89F4-0EACD5A0D3F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F28BF8A4-55F6-410E-89F4-0EACD5A0D3F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F28BF8A4-55F6-410E-89F4-0EACD5A0D3F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F28BF8A4-55F6-410E-89F4-0EACD5A0D3F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28CFEA4D-D683-4CF5-8E78-6877508F1A8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28CFEA4D-D683-4CF5-8E78-6877508F1A8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28CFEA4D-D683-4CF5-8E78-6877508F1A8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28CFEA4D-D683-4CF5-8E78-6877508F1A8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
