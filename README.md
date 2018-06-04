@@ -22,7 +22,7 @@ The idea is to keep your business code (logic) away from used frameworks (mvc, m
 to easy split up or reuse code of your application.
 `BricksFx` is a small library to provide flexebility. It is not a heavy application framework. 
 
-### Why? 
+### Why you should use
 From my experience as a developer you often work in a project that starts with a simple application. Depending on the project
 and its needs, the application starts growing. Domains and logic will be added and quite often the application becoming a monolithic application.
 At some point of the development you might determine the need of scaling. Monolithic applications are bad when it comes to scaling. 
@@ -31,7 +31,7 @@ This might be the time where you want to splitt out domains and move a [BoundedC
 The rework and restrukturing of the application will be a lot of work.  
 In this case `BricksFx` support you to be flexible and move your code from one application to another.
 
-### How?
+### How to use
 Define a `Brick` for a module you want to write. Bind the dependencies you want to expose and seed
 up an `IPlattform` where you can stick new and old `Bricks` (modules) together. 
 It should be as easy as building LEGO-Bricks.
