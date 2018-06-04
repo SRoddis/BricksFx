@@ -18,39 +18,23 @@ Build your Application Brick by Brick
 
 ### What is BricksFx?
 `BricksFx` is the library to write code in small and handy modules that can be seed up quick and easy in new or old projects.
-The idea is to keep your business code (logic) away from used frameworks (mvc, mvvm etc.) and dependency-injection-containers, 
+The idea is to keep your business code (logic) away from used frameworks (mvc, mvvm etc.) and dependency-injection-container, 
 to easy split up or reuse code of your application.
 `BricksFx` is a small library to provide flexebility. It is not a heavy application framework. 
 
 ### Why? 
 From my experience as a developer you often work in a project that starts with a simple application. Depending on the project
 and its needs, the application starts growing. Domains and logic will be added and quite often the application becoming a monolithic application.
-At some point of the development you might determine the need of scaling. Monolithic applications are not bad in general, but they are when it comes to scaling. 
+At some point of the development you might determine the need of scaling. Monolithic applications are bad when it comes to scaling. 
 
-This might be the time where you want to splitt out domains and creat a [BoundedContext](https://martinfowler.com/bliki/BoundedContext.html) in a separate application/service.
-The first 
-
-
-------------
-
-depending on the experience in the team.
-
-
- you add more and more logic to the system and your project grows. The application starts becoming a monolithic application.
-When you miss the right moment to talk about architecture changes
-
-`BricksFx` brings you the possibility to describe your code as modules.
-You can describe all the interfaces you want to expose and keep the implementation internal.
-The binding mechanism makes it easy to add your code to an existing or new project.
-
-Because you should love your code and tread it like home. 
-
-And yes, that means you have to use interfaces. But that is what you should do… always! 
+This might be the time where you want to splitt out domains and move a [BoundedContext](https://martinfowler.com/bliki/BoundedContext.html) in a separate application/service.
+The rework and restrukturing of the application will be a lot of work.  
+In this case `BricksFx` support you to be flexible and move your code from one application to another.
 
 ### How?
-Define a `Brick` for the code you want to write, bind the dependencies you want to expose and seed
+Define a `Brick` for a module you want to write. Bind the dependencies you want to expose and seed
 up an `IPlattform` where you can stick new and old `Bricks` (modules) together. 
-It should be as easy as building LEGO-Bricks… KISS!
+It should be as easy as building LEGO-Bricks.
 
 
 # Installation
