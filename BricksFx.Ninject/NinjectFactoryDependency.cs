@@ -3,9 +3,9 @@ using BricksFx.DI;
 
 namespace BricksFx.Ninject
 {
-    public class NinjectDependencyFactory : InterfaceDependency, INinjectDependencyFactory
+    public class NinjectFactoryDependency : InterfaceDependency, INinjectFactoryDependency
     {
-        public NinjectDependencyFactory(Type @interface)
+        public NinjectFactoryDependency(Type @interface)
             : base(@interface, null, LifeTime.Singleton)
         {
             IsFactory = true;

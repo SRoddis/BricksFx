@@ -51,7 +51,7 @@ namespace BricksFx.Ninject.Test
             // Arrange
             var dependencies = new IDependency[]
             {
-                new NinjectDependencyFactory(typeof(ITestClassFactory)),
+                new NinjectFactoryDependency(typeof(ITestClassFactory)),
                 new InterfaceDependency(typeof(ITestClass), typeof(TestClass), LifeTime.OnRequest)
             };
 
@@ -62,6 +62,24 @@ namespace BricksFx.Ninject.Test
             var factory = _container.Get<ITestClassFactory>();
 
             var implementation = factory.Create();
+            implementation.Should().BeOfType<TestClass>();
+        }
+        
+        [Test]
+        public void WHEN_use_provider_THEN_correct_implementation_is_returned()
+        {
+            // Arrange
+            var dependencies = new IDependency[]
+            {
+                new NinjectProviderDependency(typeof(ITestClass), typeof(TestClassProvider), LifeTime.OnRequest), 
+            };
+
+            // Act
+            _adapter.Register(dependencies);
+
+            // Assert
+            var implementation = _container.Get<ITestClass>();
+
             implementation.Should().BeOfType<TestClass>();
         }
     }

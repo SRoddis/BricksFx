@@ -21,9 +21,9 @@ namespace BricksFx.Ninject
         {
             foreach (var dependency in dependencies)
             {
-                if (dependency is INinjectDependencyFactory)
+                if (dependency is INinjectFactoryDependency)
                 {
-                    HandleNinjectDependencyFactory(dependency as INinjectDependencyFactory);
+                    HandleNinjectDependencyFactory(dependency as INinjectFactoryDependency);
                     continue;
                 }
 
@@ -33,15 +33,28 @@ namespace BricksFx.Ninject
                     continue;
                 }
 
+                if (dependency is INinjectProviderDependency)
+                {
+                    HandleNinjectProviderDependency(dependency as INinjectProviderDependency);
+                    continue;
+                }
+
                 HandleDependency(dependency);
             }
         }
 
-        private void HandleNinjectDependencyFactory(INinjectDependencyFactory dependency)
+        private void HandleNinjectDependencyFactory(INinjectFactoryDependency factoryDependency)
         {
-            var binding = _kernel.Bind(dependency.Interface).ToFactory(dependency.Interface);
+            var binding = _kernel.Bind(factoryDependency.Interface).ToFactory(factoryDependency.Interface);
 
-            BindLifeTime(dependency, binding);
+            BindLifeTime(factoryDependency, binding);
+        }
+        
+        private void HandleNinjectProviderDependency(INinjectProviderDependency providerDependency)
+        {
+            var binding = _kernel.Bind(providerDependency.Interface).ToProvider(providerDependency.Provider);
+
+            BindLifeTime(providerDependency, binding);
         }
 
         private void HandleNinjectDependency(INinjectNamedDependency namedDependency)

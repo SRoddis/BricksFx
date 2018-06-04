@@ -52,11 +52,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="INinjectNamedDependency.cs" />
-    <Compile Include="INinjectDependencyFactory.cs" />
+    <Compile Include="INinjectFactoryDependency.cs" />
+    <Compile Include="INinjectProviderDependency.cs" />
     <Compile Include="NinjectBrick.cs" />
     <Compile Include="NinjectContainerAdapter.cs" />
     <Compile Include="NinjectNamedDependency.cs" />
-    <Compile Include="NinjectDependencyFactory.cs" />
+    <Compile Include="NinjectFactoryDependency.cs" />
+    <Compile Include="NinjectProviderDependency.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

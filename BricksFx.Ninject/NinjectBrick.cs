@@ -14,7 +14,7 @@ namespace BricksFx.Ninject
 
         protected void BindFactory<TInterface, TClass>() where TInterface : class
         {
-            Dependencies.Add(new NinjectDependencyFactory(typeof(TInterface)));
+            Dependencies.Add(new NinjectFactoryDependency(typeof(TInterface)));
         }
     }
 }

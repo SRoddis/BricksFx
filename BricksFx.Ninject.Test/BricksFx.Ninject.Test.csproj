@@ -63,6 +63,7 @@
     <Compile Include="TestClasses\ITestClassFactory.cs" />
     <Compile Include="TestClasses\TestClass.cs" />
     <Compile Include="TestClasses\TestClassFactory.cs" />
+    <Compile Include="TestClasses\TestClassProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
