@@ -1,4 +1,8 @@
-﻿using Autofac;
+﻿using System;
+using System.Runtime.InteropServices.ComTypes;
+using Autofac;
+using Autofac.Core;
+using Autofac.Core.Lifetime;
 using BricksFx.Autofac.Test.TestClasses;
 using BricksFx.DI;
 using FluentAssertions;
@@ -32,12 +36,22 @@ namespace BricksFx.Autofac.Test
             _adapter.Register(dependencies);
             var container = _builder.Build();
 
-            // Assert
-            var instance = container.Resolve<ITestClass>();
-            instance.StringValue = "test";
+            using (var requestContainer = container.BeginLifetimeScope(MatchingScopeLifetimeTags.RequestLifetimeScopeTag))
+            {
+                // Assert
+                var instance = requestContainer.Resolve<ITestClass>();
+                instance.StringValue = "test";
 
-            var onRequest = container.Resolve<ITestClass>();
-            onRequest.StringValue.Should().Be(null);
+                var onRequest = requestContainer.Resolve<ITestClass>();
+                onRequest.StringValue.Should().Be("test");    
+            }
+            
+            Action afterRequestAction = () =>
+            {
+                var afterRequest = container.Resolve<ITestClass>();
+                afterRequest.StringValue.Should().Be(null);
+            };
+            afterRequestAction.Should().Throw<DependencyResolutionException>();
         }
 
         [Test]
