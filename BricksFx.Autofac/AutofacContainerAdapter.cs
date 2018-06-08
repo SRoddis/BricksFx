@@ -24,7 +24,11 @@ namespace BricksFx.Autofac
         {
             var binding = _builder.RegisterType(dependency.Implementation);
 
-            if (dependency is IInterfaceDependency interfaceDependency) binding.As(interfaceDependency.Interface);
+            if (dependency is IInterfaceDependency)
+            {
+                var interfaceDependency = dependency as IInterfaceDependency;
+                binding.As(interfaceDependency.Interface);
+            }
 
             BindLifeTime(dependency, binding);
         }
