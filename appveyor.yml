@@ -31,6 +31,10 @@ artifacts:
   - path: BricksFx.Ninject\bin\Release\BricksFx.Ninject.dll
     name: BricksFx.Ninject.dll
   - path: '**\BricksFx.*.nupkg'
+  
+  - path: BricksFx.Autofac\bin\Release\BricksFx.Autofac.dll
+    name: BricksFx.Autofac.dll
+  - path: '**\BricksFx.*.nupkg'
 
 #uncomment to publish to NuGet
 #deploy:
