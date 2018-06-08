@@ -3,6 +3,7 @@ version: 1.0.{build}
 environment:
   COVERALLS_REPO_TOKEN:
     secure: TDhTT9zQKPO1Hou+HKeTgQYmBjR4HmrQpd0aY0Og/hPXleZyv7x5V/rV3NCC6DMw
+  image: Visual Studio 2017
 
 assembly_info:
   patch: true
