@@ -27,8 +27,6 @@ From my experience as a developer you often work in a project that starts with a
 and its needs, the application starts growing. Domains and logic will be added and quite often the application becoming a monolithic application.
 At some point of the development you might determine the need of scaling. Monolithic applications are bad when it comes to scaling. 
 
-This might be the time where you want to splitt out domains and move a [BoundedContext](https://martinfowler.com/bliki/BoundedContext.html) in a separate application/service.
-The rework and restrukturing of the application will be a lot of work.  
 In this case `BricksFx` support you to be flexible and move your code from one application to another.
 
 ### How to use
