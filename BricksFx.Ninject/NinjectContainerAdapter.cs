@@ -21,21 +21,21 @@ namespace BricksFx.Ninject
         {
             foreach (var dependency in dependencies)
             {
-                if (dependency is INinjectFactoryDependency)
+                if (dependency is INinjectFactoryDependency ninjectFactoryDependency)
                 {
-                    HandleNinjectDependencyFactory(dependency as INinjectFactoryDependency);
+                    HandleNinjectDependencyFactory(ninjectFactoryDependency);
                     continue;
                 }
 
-                if (dependency is INinjectNamedDependency)
+                if (dependency is INinjectNamedDependency ninjectNamedDependency)
                 {
-                    HandleNinjectDependency(dependency as INinjectNamedDependency);
+                    HandleNinjectDependency(ninjectNamedDependency);
                     continue;
                 }
 
-                if (dependency is INinjectProviderDependency)
+                if (dependency is INinjectProviderDependency ninjectProviderDependency)
                 {
-                    HandleNinjectProviderDependency(dependency as INinjectProviderDependency);
+                    HandleNinjectProviderDependency(ninjectProviderDependency);
                     continue;
                 }
 
